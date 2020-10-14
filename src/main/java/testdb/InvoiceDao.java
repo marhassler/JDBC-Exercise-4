@@ -6,6 +6,7 @@ public interface InvoiceDao {
 
     ArrayList<Invoice> showAllInvoices();
     void insertInvoice(Invoice i);
-    void deleteInvoid(Long i);
+    void deleteInvoid(int i);
+    void updateInvoice(int index, Invoice i);
 
 }

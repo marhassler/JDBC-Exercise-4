@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="testdb" />
         <module name="JDBC Git Ex4" />
+        <module name="JDBC_4" />
       </profile>
     </annotationProcessing>
   </component>

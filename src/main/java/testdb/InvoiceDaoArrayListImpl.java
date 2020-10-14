@@ -11,9 +11,9 @@ public class InvoiceDaoArrayListImpl implements  InvoiceDao{
     {
         this.invoices = new ArrayList<>();
         java.util.Date date2 = new  java.util.Date();
-        this.invoices.add(new Invoice(1L, new Date(date2.getTime()),"Beschreibung"));
-        this.invoices.add(new Invoice(2L, new Date(date2.getTime()),"Beschreibung"));
-        this.invoices.add(new Invoice(3L, new Date(date2.getTime()),"Beschreibung"));
+        this.invoices.add(new Invoice(1, new Date(date2.getTime()),"Beschreibung"));
+        this.invoices.add(new Invoice(2, new Date(date2.getTime()),"Beschreibung"));
+        this.invoices.add(new Invoice(3, new Date(date2.getTime()),"Beschreibung"));
     }
 
     @Override
@@ -29,7 +29,7 @@ public class InvoiceDaoArrayListImpl implements  InvoiceDao{
     }
 
     @Override
-    public void deleteInvoid(Long i) {
+    public void deleteInvoid(int i) {
         for(Invoice i2 : this.invoices)
         {
             if(i2.getId()==i)
@@ -38,5 +38,11 @@ public class InvoiceDaoArrayListImpl implements  InvoiceDao{
                 return;
             }
         }
+    }
+
+    @Override
+    public void updateInvoice(int index,Invoice i)
+    {
+        this.invoices.set(index,i);
     }
 }

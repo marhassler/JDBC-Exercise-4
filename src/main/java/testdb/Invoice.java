@@ -4,21 +4,22 @@ import java.sql.Date;
 
 public class Invoice {
 
-    private Long id;
+    private int id;
     private Date date;
     private String description;
 
-    public Invoice(Long id, Date datum, String description) {
+    public Invoice(int id, Date datum, String description) {
         this.id = id;
         this.date = datum;
         this.description = description;
     }
 
-    public Long getId() {
+
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
